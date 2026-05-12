@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wishes IMDb - Filmajánlás</title>
 </head>
 <body>
-    
+    <!-- Műfaj választó -->
+     <p>Mi legyen a film műfaja?</p>
+    <select name="tipus" id="filmtipus">
+        <option value="" hidden>--Válaszon--</option>
+        <option value="akcio">Akciófilm</option>
+        <option value="vigjatek">Vígjáték</option>
+        <option value="drama">Dráma</option>
+        <option value="kaland">Kalandfilm</option>
+        <option value="scifi">Sci-fi</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="horror">Horror</option>
+        <option value="western">Western</option>
+        <option value="dokumentum">Dokumentumfilm</option>
+        <option value="bunugyi">Bűnügyi film</option>
+    </select>
+
+    <!--Film hossz -->
+    <p>Milyen hosszú legyen a film?</p>
+    <input type="radio" name="hossz" id="90kisebb">
+    <label for="90kisebb">90 percnél kevesebb</label>
+    <input type="radio" name="hossz" id="90-120">
+    <label for="90-120">90-120 perc</label>
+    <input type="radio" name="hossz" id="120tobb">
+    <label for="120tobb">120 percnél több</label>
+
+    <!-- Streaming szolgáltató -->
+    <p>Hol szeretnéd nézni?</p>
+    <input type="checkbox" name="streaming" id="netflix">
+    <label for="netflix">Netflix</label>
+    <input type="checkbox" name="streaming" id="disney">
+    <label for="disney">Disney+</label>
+    <input type="checkbox" name="streaming" id="hbo">
+    <label for="hbo">HBO Max</label>
+    <input type="checkbox" name="streaming" id="primevideo">
+    <label for="primevideo">Prime Video</label>
+
+    <!-- Értékelési szint -->
+     <br><label for="ertekeles">Értékelés</label><br>
+     <input type="range" name="ertekeles" id="ertekeles" min="1" max="5" value="1">
+
 </body>
 </html>
