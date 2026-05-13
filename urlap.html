@@ -1,58 +1,143 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishes IMDb - Filmajánlás</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <a href="index.html">Főoldal</a>
-        <a href="filmek.html">Filmek</a>
-        <a href="sorozatok.html">Sorozatok</a>
-        <a href="kedvenceim.html">Kedvenceim</a>
-        <a href="urlap.html">Filmajánlás</a>
+      <a href="index.html">Főoldal</a>
+      <a href="filmek.html">Filmek</a>
+      <a href="sorozatok.html">Sorozatok</a>
+      <a href="kedvenceim.html">Kedvenceim</a>
+      <a href="urlap.html">Filmajánlás</a>
     </nav>
 
     <!-- Műfaj választó -->
-     <p>Mi legyen a film műfaja?</p>
+    <p>Mi legyen a film műfaja?</p>
     <select name="tipus" id="filmtipus">
-        <option value="" hidden>--Válaszon--</option>
-        <option value="akcio">Akciófilm</option>
-        <option value="vigjatek">Vígjáték</option>
-        <option value="drama">Dráma</option>
-        <option value="kaland">Kalandfilm</option>
-        <option value="scifi">Sci-fi</option>
-        <option value="fantasy">Fantasy</option>
-        <option value="horror">Horror</option>
-        <option value="western">Western</option>
-        <option value="dokumentum">Dokumentumfilm</option>
-        <option value="bunugyi">Bűnügyi film</option>
+      <option value="" hidden>--Válaszon--</option>
+      <option value="akcio">Akciófilm</option>
+      <option value="vigjatek">Vígjáték</option>
+      <option value="drama">Dráma</option>
+      <option value="kaland">Kalandfilm</option>
+      <option value="scifi">Sci-fi</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="horror">Horror</option>
+      <option value="western">Western</option>
+      <option value="dokumentum">Dokumentumfilm</option>
+      <option value="bunugyi">Bűnügyi film</option>
     </select>
 
     <!--Film hossz -->
     <p>Milyen hosszú legyen a film?</p>
-    <input type="radio" name="hossz" id="90kisebb">
+    <input type="radio" name="hossz" value="90kisebb" />
     <label for="90kisebb">90 percnél kevesebb</label>
-    <input type="radio" name="hossz" id="90-120">
+    <input type="radio" name="hossz" value="90-120" />
     <label for="90-120">90-120 perc</label>
-    <input type="radio" name="hossz" id="120tobb">
+    <input type="radio" name="hossz" value="120tobb" />
     <label for="120tobb">120 percnél több</label>
 
     <!-- Streaming szolgáltató -->
     <p>Hol szeretnéd nézni?</p>
-    <input type="checkbox" name="streaming" id="netflix">
+    <input type="checkbox" name="streaming" id="netflix" />
     <label for="netflix">Netflix</label>
-    <input type="checkbox" name="streaming" id="disney">
+    <input type="checkbox" name="streaming" id="disney" />
     <label for="disney">Disney+</label>
-    <input type="checkbox" name="streaming" id="hbo">
+    <input type="checkbox" name="streaming" id="hbo" />
     <label for="hbo">HBO Max</label>
-    <input type="checkbox" name="streaming" id="primevideo">
+    <input type="checkbox" name="streaming" id="primevideo" />
     <label for="primevideo">Prime Video</label>
 
     <!-- Értékelési szint -->
-     <br><label for="ertekeles">Értékelés</label><br>
-     <input type="range" name="ertekeles" id="ertekeles" min="1" max="5" value="1">
+    <br /><label for="ertekeles">Értékelés</label><br />
+    <input
+      type="range"
+      name="ertekeles"
+      id="ertekeles"
+      min="1"
+      max="5"
+      value="1"
+    />
 
-</body>
+    <button onclick="kereses()">Keresés</button>
+    <div id="eredmeny"></div>
+  </body>
+  <script>
+
+    const filmek = [
+        //ki kell töleteni a film adataival majd megcsinálom amint megh lesz minden adat
+        {
+            cim: "",
+            mufaj: "",
+            hossz: "",
+            streaming: "",
+            ertekeles: 0
+        },
+    ];
+    function kereses() {
+        const mufaj = document.getElementById("filmtipus").value;
+        const hossz = document.querySelector('input[name="hossz"]:checked')?.value;
+        const ertekeles = document.getElementById("ertekeles").value;
+        let streamingek = [];
+        if(document.getElementById("netflix").checked){
+            streamingek.push("Netflix");
+        }
+        if(document.getElementById("disney").checked){
+            streamingek.push("Disney+");
+        }
+        if(document.getElementById("hbo").checked){
+            streamingek.push("HBO Max");
+        }
+        if(document.getElementById("primevideo").checked){
+            streamingek.push("Prime Video");
+        }
+    //A filmek.filter() egy JavaScript függvény, ami kiszűri azokat az elemeket egy tömbből, amelyek megfelelnek egy feltételnek.
+        const talalatok = filmek.filter(film =>
+            (!mufaj || film.mufaj == mufaj)
+            &&
+            (!hossz || film.hossz == hossz)
+            &&
+            (
+                streamingek.length == 0
+                ||
+                streamingek.includes(film.streaming)
+            )
+            &&
+            film.ertekeles >= ertekeles
+        );
+        const eredmeny = document.getElementById("eredmeny");
+        eredmeny.innerHTML = "";
+        if(talalatok.length > 0){
+            eredmeny.innerHTML = "<h2>Találatok:</h2>";
+            talalatok.forEach(film => {
+                eredmeny.innerHTML += `
+                    <div style="
+                        border:1px solid gray;
+                        padding:15px;
+                        margin:15px;
+                        border-radius:10px;
+                    ">
+                        <h3>${film.cim}</h3>
+                        <p>
+                            <b>Műfaj:</b> ${film.mufaj}
+                        </p>
+                        <p>
+                            <b>Streaming:</b> ${film.streaming}
+                        </p>
+                        <p>
+                            <b>Értékelés:</b> ${film.ertekeles}/5
+                        </p>
+                    </div>
+                `;
+            });
+        }
+        else{
+            eredmeny.innerHTML = `
+                <h2>Nincs találat.</h2>
+            `;
+        }
+    }
+  </script>
 </html>
