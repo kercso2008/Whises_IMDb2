@@ -1,33 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishes IMDb - Kedvenceim</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>Wishes IMDb</header>
     <nav>
-        <a href="index.html">Főoldal</a>
-        <a href="filmek.html">Filmek</a>
-        <a href="sorozatok.html">Sorozatok</a>
-        <a href="kedvenceim.html">Kedvenceim</a>
-        <a href="urlap.html">Filmajánlás</a>
+      <a href="index.html">Főoldal</a>
+      <a href="filmek.html">Filmek</a>
+      <a href="sorozatok.html">Sorozatok</a>
+      <a href="kedvenceim.html">Kedvenceim</a>
+      <a href="urlap.html">Filmajánlás</a>
     </nav>
 
     <header>Kedvenceim</header>
 
     <h1>Profil</h1>
     <h3>Név</h3>
-    <input type="text" name="" id="" placeholder=""><br>
+    <input type="text" name="" id="" placeholder="" /><br />
 
     <h3>Profilkép:</h3>
-    <input type="file" name="" id="" accept=""><br>
+    <input type="file" name="" id="" accept="" /><br />
 
-    <h3>Kedvenc Műfaj:</h3>
-    <p id=""></p>
+    <button id="torles" onclick="osszesTorles()">Összes kedvenc törlése</button>
 
     <!-- Itt a "kedvenc" lista helye -->
-    <p id=""></p>
-</body>
+    <div id="kedvencek-lista"></div>
+
+    <script>
+
+        let kedvencek =
+            JSON.parse(localStorage.getItem("kedvencek")) || [];
+
+        let lista =
+            document.getElementById("kedvencek-lista");
+
+        if(kedvencek.length === 0){
+
+            lista.innerHTML = "<h2>Nincsenek kedvencek.</h2>";
+
+        }
+        else{
+
+            kedvencek.forEach(item => {
+
+                let div = document.createElement("div");
+
+                div.innerHTML = `
+
+                    <h2>${item.cim}</h2>
+
+                    <img src="${item.kep}"
+                    alt="${item.cim}"
+                    width="250">
+
+                    <p>Műfaj: ${item.mufaj}</p>
+
+                    <p>Típus: ${item.tipus}</p>
+
+                    <button onclick="torles('${item.cim}')">
+                        Törlés
+                    </button>
+
+                    <hr>
+
+                `;
+
+                lista.appendChild(div);
+
+            });
+
+        }
+
+        function torles(cim){
+
+            kedvencek =
+                kedvencek.filter(f => f.cim !== cim);
+
+            localStorage.setItem(
+                "kedvencek",
+                JSON.stringify(kedvencek)
+            );
+
+            location.reload();
+
+        }
+
+        function osszesTorles(){
+
+            localStorage.removeItem("kedvencek");
+
+            location.reload();
+
+        }
+
+    </script>
+
+  </body>
 </html>

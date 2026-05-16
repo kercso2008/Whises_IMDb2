@@ -1,90 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wishes IMDb - Sorozatok</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>Wishes IMDb</header>
     <nav>
-        <a href="index.html">Főoldal</a>
-        <a href="filmek.html">Filmek</a>
-        <a href="sorozatok.html">Sorozatok</a>
-        <a href="kedvenceim.html">Kedvenceim</a>
-        <a href="urlap.html">Filmajánlás</a>
+      <a href="index.html">Főoldal</a>
+      <a href="filmek.html">Filmek</a>
+      <a href="sorozatok.html">Sorozatok</a>
+      <a href="kedvenceim.html">Kedvenceim</a>
+      <a href="urlap.html">Filmajánlás</a>
     </nav>
 
     <header>Sorozatok</header>
 
     <!-- Sorozat 1 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Columbo</h2>
+
+        <img src="kepek/columbo.jpg"
+        alt="Columbo"
+        width="250">
+
+        <p>Bűnügyi | 70 perc/rész | SkyShowtime | ⭐ 4/5</p>
+
+        <button onclick="kedvencMentese(
+            'Columbo',
+            'Bűnügyi',
+            'kepek/columbo.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 2 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Dr. House</h2>
+
+        <img src="kepek/drhouse.jpg"
+        alt="Dr. House"
+        width="250">
+
+        <p>Dráma | 44 perc/rész | Netflix | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'Dr. House',
+            'Dráma',
+            'kepek/drhouse.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 3 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Formula 1: Drive to Survive</h2>
+
+        <img src="kepek/drivetosurvive.jpg"
+        alt="Drive to Survive"
+        width="250">
+
+        <p>Dokumentum | 40 perc/rész | Netflix | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'Formula 1: Drive to Survive',
+            'Dokumentum',
+            'kepek/drivetosurvive.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 4 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Family Guy</h2>
+
+        <img src="kepek/familyguy.jpg"
+        alt="Family Guy"
+        width="250">
+
+        <p>Vígjáték | 22 perc/rész | Disney+ | ⭐ 4/5</p>
+
+        <button onclick="kedvencMentese(
+            'Family Guy',
+            'Vígjáték',
+            'kepek/familyguy.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 5 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Spartacus</h2>
+
+        <img src="kepek/spartacus.jpg"
+        alt="Spartacus"
+        width="250">
+
+        <p>Kaland | 55 perc/rész | Starz | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'Spartacus',
+            'Kaland',
+            'kepek/spartacus.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 6 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Star Trek</h2>
+
+        <img src="kepek/startrek.jpg"
+        alt="Star Trek"
+        width="250">
+
+        <p>Sci-Fi | 50 perc/rész | SkyShowtime | ⭐ 4/5</p>
+
+        <button onclick="kedvencMentese(
+            'Star Trek',
+            'Sci-Fi',
+            'kepek/startrek.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 7 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>The Last of Us</h2>
+
+        <img src="kepek/thelastofus.jpg"
+        alt="The Last of Us"
+        width="250">
+
+        <p>Horror | 60 perc/rész | HBO Max | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'The Last of Us',
+            'Horror',
+            'kepek/thelastofus.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 8 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Trónok harca</h2>
+
+        <img src="kepek/tronokharca.jpg"
+        alt="Trónok harca"
+        width="250">
+
+        <p>Fantasy | 57 perc/rész | HBO Max | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'Trónok harca',
+            'Fantasy',
+            'kepek/tronokharca.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 9 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Yellowstone</h2>
+
+        <img src="kepek/yellowstone.jpg"
+        alt="Yellowstone"
+        width="250">
+
+        <p>Western | 45 perc/rész | SkyShowtime | ⭐ 5/5</p>
+
+        <button onclick="kedvencMentese(
+            'Yellowstone',
+            'Western',
+            'kepek/yellowstone.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
 
     <!-- Sorozat 10 -->
-    <div>
-        <label for=""></label>
-        <img src="" alt="">
-        <p></p>
+    <div class="film">
+
+        <h2>Zöld Íjász</h2>
+
+        <img src="kepek/zoldijasz.jpg"
+        alt="Zöld Íjász"
+        width="250">
+
+        <p>Akció | 42 perc/rész | Netflix | ⭐ 4/5</p>
+
+        <button onclick="kedvencMentese(
+            'Zöld Íjász',
+            'Akció',
+            'kepek/zoldijasz.jpg',
+            'Sorozat'
+        )">
+            ⭐ Kedvenc
+        </button>
+
     </div>
-</body>
+
+    <script>
+
+        function kedvencMentese(cim, mufaj, kep, tipus){
+
+            let kedvencek =
+                JSON.parse(localStorage.getItem("kedvencek")) || [];
+
+            let uj = {
+                cim: cim,
+                mufaj: mufaj,
+                kep: kep,
+                tipus: tipus
+            };
+
+            if(!kedvencek.find(f => f.cim === cim)){
+
+                kedvencek.push(uj);
+
+                localStorage.setItem(
+                    "kedvencek",
+                    JSON.stringify(kedvencek)
+                );
+
+                alert("Hozzáadva a kedvencekhez!");
+
+            }
+            else{
+
+                alert("Már szerepel a kedvencek között!");
+
+            }
+        }
+
+    </script>
+  </body>
 </html>
