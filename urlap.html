@@ -21,55 +21,79 @@
     <!-- Műfaj választó -->
     <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Filmajánlás</header>
 
-    <h2>Mi legyen a film műfaja?</h2>
-    <select name="tipus" id="filmtipus">
+    <div class="container mt-4">
+
+  <div class="card shadow p-4 bg-warning mx-auto" style="max-width: 600px;">
+
+    <h2 class="text-center mb-4">Mi legyen a film műfaja?</h2>
+
+    <select class="form-select mb-4" id="filmtipus">
       <option value="" hidden>--Válaszon--</option>
-      <option value="akcio">Akciófilm</option>
-      <option value="vigjatek">Vígjáték</option>
-      <option value="drama">Dráma</option>
-      <option value="kaland">Kalandfilm</option>
-      <option value="scifi">Sci-fi</option>
-      <option value="fantasy">Fantasy</option>
-      <option value="horror">Horror</option>
-      <option value="western">Western</option>
-      <option value="dokumentum">Dokumentumfilm</option>
-      <option value="bunugyi">Bűnügyi film</option>
+      <option value="Akció">Akciófilm</option>
+      <option value="Vígjáték">Vígjáték</option>
+      <option value="Dráma">Dráma</option>
+      <option value="Kaland">Kalandfilm</option>
+      <option value="Sci-Fi">Sci-fi</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Horror">Horror</option>
+      <option value="Western">Western</option>
+      <option value="Dokumentum">Dokumentumfilm</option>
+      <option value="Bűnügyi">Bűnügyi film</option>
     </select>
 
-    <!--Film hossz -->
-    <h2>Milyen hosszú legyen a film?</h2>
-    <input type="radio" name="hossz" value="90kisebb" />
-    <label for="90kisebb">90 percnél kevesebb</label><br>
-    <input type="radio" name="hossz" value="90-120" />
-    <label for="90-120">90-120 perc</label><br>
-    <input type="radio" name="hossz" value="120tobb" />
-    <label for="120tobb">120 percnél több</label><br>
+    <h4 class="mb-2">Milyen hosszú legyen a film?</h4>
 
-    <!-- Streaming szolgáltató -->
-    <h2>Hol szeretnéd nézni?</h2>
-    <input type="checkbox" name="streaming" id="netflix" />
-    <label for="netflix">Netflix</label><br>
-    <input type="checkbox" name="streaming" id="disney" />
-    <label for="disney">Disney+</label><br>
-    <input type="checkbox" name="streaming" id="hbo" />
-    <label for="hbo">HBO Max</label><br>
-    <input type="checkbox" name="streaming" id="primevideo" />
-    <label for="primevideo">Prime Video</label><br>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="hossz" value="90kisebb" id="r1">
+      <label class="form-check-label" for="r1">90 percnél kevesebb</label>
+    </div>
 
-    <!-- Értékelési szint -->
-    <br /><label for="ertekeles">Értékelés</label><br />
-    <input
-      type="range"
-      name="ertekeles"
-      id="ertekeles"
-      min="1"
-      max="5"
-      value="1"
-    />
-    <br>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="hossz" value="90-120" id="r2">
+      <label class="form-check-label" for="r2">90-120 perc</label>
+    </div>
 
-    <button onclick="kereses()">Keresés</button>
-    <div id="eredmeny"></div>
+    <div class="form-check mb-4">
+      <input class="form-check-input" type="radio" name="hossz" value="120tobb" id="r3">
+      <label class="form-check-label" for="r3">120 percnél több</label>
+    </div>
+
+    <h4 class="mb-2">Hol szeretnéd nézni?</h4>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="netflix">
+      <label class="form-check-label" for="netflix">Netflix</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="disney">
+      <label class="form-check-label" for="disney">Disney+</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="hbo">
+      <label class="form-check-label" for="hbo">HBO Max</label>
+    </div>
+
+    <div class="form-check mb-4">
+      <input class="form-check-input" type="checkbox" id="primevideo">
+      <label class="form-check-label" for="primevideo">Prime Video</label>
+    </div>
+
+    <button class="btn btn-dark w-100" onclick="kereses()">
+      Keresés
+    </button>
+
+  </div>
+
+  <div class="container mt-4 d-flex justify-content-center">
+
+  <div class="card shadow p-3 w-75 bg-warning p-4 rounded shadow" id="eredmeny">
+  </div>
+
+</div>
+
+</div>
   </body>
 
   <script>
@@ -220,7 +244,6 @@
       const hossz = document.querySelector(
         'input[name="hossz"]:checked',
       )?.value;
-      const ertekeles = document.getElementById("ertekeles").value;
       let streamingek = [];
       if (document.getElementById("netflix").checked) {
         streamingek.push("Netflix");
@@ -239,8 +262,7 @@
         (film) =>
           (!mufaj || film.mufaj == mufaj) &&
           (!hossz || film.hossz == hossz) &&
-          (streamingek.length == 0 || streamingek.includes(film.streaming)) &&
-          film.ertekeles >= ertekeles,
+          (streamingek.length == 0 || streamingek.includes(film.streaming))
       );
       const eredmeny = document.getElementById("eredmeny");
       eredmeny.innerHTML = "";
@@ -248,23 +270,23 @@
         eredmeny.innerHTML = "<h2>Találatok:</h2>";
         talalatok.forEach((film) => {
           eredmeny.innerHTML += `
-                    <div style="
-                        border:1px solid gray;
-                        padding:15px;
-                        margin:15px;
-                        border-radius:10px;
-                    ">
-                        <h3>${film.cim}</h3>
-                        <p>
-                            <b>Műfaj:</b> ${film.mufaj}
-                        </p>
-                        <p>
-                            <b>Streaming:</b> ${film.streaming}
-                        </p>
-                        <p>
-                            <b>Értékelés:</b> ${film.ertekeles}/5
-                        </p>
-                    </div>
+<div class="card shadow-sm mb-3 p-3">
+
+    <h3 class="mb-3">${film.cim}</h3>
+
+    <p class="mb-1">
+        <strong>Műfaj:</strong> ${film.mufaj}
+    </p>
+
+    <p class="mb-1">
+        <strong>Streaming:</strong> ${film.streaming}
+    </p>
+
+    <p class="mb-0">
+        <strong>Értékelés:</strong> ${film.ertekeles}/5
+    </p>
+
+</div>
                 `;
         });
       } else {
