@@ -7,104 +7,266 @@
     <title>Wishes IMDb</title>
 </head>
 <body class="bg-dark text-light">
-    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Wishes IMDb</header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-center">
-        <a href="index.html" class="ms-5 text-white">Főoldal</a>
-        <a href="filmek.html" class="ms-5 text-white">Filmek</a>
-        <a href="sorozatok.html" class="ms-5 text-white">Sorozatok</a>
-        <a href="kedvenceim.html" class="ms-5 text-white">Kedvenceim</a>
-        <a href="urlap.html" class="ms-5 text-white">Filmajánlás</a>
-    </nav>
+    <header class="text-center h1 py-3 bg-light text-dark shadow-sm">
+    🎬 Wishes IMDb
+</header>
 
-    <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-        <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Top 5 legnézettebb filmek</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container justify-content-center">
 
-    <!-- Film 1 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Michael</h2>
-        <img src="képek/film/Michael (Dráma).jpg" alt="Micheal" width="250">
-        <p>Az Antoine Fuqua által rendezett Michael egy nagyszabású életrajzi film, amelyben a Pop Királyát saját unokaöccse, Jaafar Jackson alakítja lenyűgöző hitelességgel.
-        Az idén áprilisban bemutatott alkotás a korai Jackson 5 sikerektől a szólókarrier csúcsáig követi végig a zenei ikon zseniális és komplex életútját.</p>
-    </div>
+        <div class="navbar-nav gap-3">
 
-    <!-- Film 2 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>F1 The Movie</h2>
-        <img src="képek/film/F1 The Movie (Akció).jpg" alt="F1 The Movie" width="250">
-        <p>A Joseph Kosinski rendezésében készült F1 – A film egy látványos sportdráma, amelyben a Brad Pitt által alakított veterán pilóta visszatér a száguldó cirkuszba, hogy egy gyengélkedő csapat mentora és versenyzője legyen.
-        A produkciót valódi versenyhétvégéken, igazi Forma–1-es autókkal és pilóták közreműködésével forgatták, így nyújtva minden idők egyik leghitelesebb és legintenzívebb autósmozi-élményét.</p>
-    </div>
+            <a href="index.html" class="nav-link text-white px-3">
+                Főoldal
+            </a>
 
-    <!-- Film 3 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Avatar</h2>
-        <img src="képek/film/Avatar (Fantasy).jpg" alt="Avatar" width="250">
-        <p>James Cameron vizuálisan forradalmi sci-fi eposza, az *Avatar*, a távoli Pandora holdjára kalauzolja a nézőket, ahol egy egykori tengerészgyalogos a kék bőrű Na'vi őslakosok között talál rá igazi küldetésére.
-        A lenyűgöző látványvilágáról és erős környezetvédelmi üzenetéről ismert alkotás filmtörténelmet írt, és a mai napig a világ legnagyobb bevételt hozó mozifilmje.</p>
-    </div>
+            <a href="filmek.html" class="nav-link text-white px-3">
+                Filmek
+            </a>
 
+            <a href="sorozatok.html" class="nav-link text-white px-3">
+                Sorozatok
+            </a>
 
-    <!-- Film 4 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Alien</h2>
-        <img src="képek/film/Alien (SciFi).jpg" alt="alien" width="250">
-        <p>Ridley Scott 1979-es sci-fi horror klasszikusa, az *Alien* (A nyolcadik utas: a Halál) a Nostromo teherűrhajó legénységének klausztrofób küzdelmét mutatja be egy könyörtelen, idegen lénnyel.
-        A feszült hangulatáról, H. R. Giger zseniális dizájnjáról és Sigourney Weaver alakításáról ismert remekmű örökre megváltoztatta a sci-fi és a horror műfaját.</p>
-    </div>
+            <a href="kedvenceim.html" class="nav-link text-white px-3">
+                Kedvenceim
+            </a>
 
-    <!-- Film 5 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Schumacher</h2>
-        <img src="képek/film/Schumacher (Dokumentum).jpg" alt="Schumacher" width="250">
-        <p>A Schumacher című Netflix-dokumentumfilm megható és részletes portrét fest a hétszeres Forma–1-es világbajnok karrierjéről, a gokartos kezdetektől a globális szupersztárrá válásig.
-        Az alkotás archív felvételeken és a legközelebbi családtagokkal készült exkluzív interjúkon keresztül mutatja be a könyörtelen versenyző mögött rejlő embert és a magánéletét.</p>
-    </div>
+            <a href="urlap.html" class="nav-link text-white px-3">
+                Filmajánlás
+            </a>
 
-    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Top 5 legnézettebb sorozat</header>
-
-    <!-- Sorozat 1 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Family Guy</h2>
-        <img src="képek/Sorozat/Family Guy (jpg verzio).jpg" alt="Family Guy" width="250">
-        <p>A Family Guy egy szatirikus animációs sorozat, amely a Griffin család abszurd és fekete humorral teli mindennapjait mutatja be.
-        A popkulturális utalásairól és kíméletlen poénjairól ismert széria évtizedek óta görbe tükröt tart a modern társadalom elé.</p>
-    </div>
-
-    <!-- Sorozat 2 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Dr. House</h2>
-        <img src="képek/Sorozat/Dr. House (Dráma).jpg" alt="Dr House" width="250">
-        <p>A Dr. House egy zseniális, de embergyűlölő és cinikus diagnoszta orvos mindennapjait követi, aki csapatával a legrejtélyesebb orvosi eseteket oldja meg.
-        A sorozat zsenialitása a feszült rejtélyek és a címszereplő belső démonaival való küzdelmének drámai ötvözetében rejlik.</p>
-    </div>
-
-    <!-- Sorozat 3 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Trónok Harca</h2>
-        <img src="képek/Sorozat/Trónok Harca (Fantasy).jpg" alt="Tronok_Harca" width="250">
-        <p>A Trónok harca egy monumentális fantasy eposz, amely Westeros nemesi házainak kíméletlen és intrikákkal teli hatalmi harcait mutatja be a Vastrónért.
-        A váratlan és sokszor sokkoló fordulatairól ismert történet az elmúlt évtized egyik legnagyobb televíziós és kulturális jelenségévé vált.</p>
-    </div>
-
-    <!-- Sorozat 4 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>The Last Of Us</h2>
-        <img src="képek/Sorozat/The Last Of Us (Horror).jpg" alt="The Last Of Us" width="250">
-        <p>A sikeres videojáték alapján készült The Last of Us egy szívszorító posztapokaliptikus dráma, amelyben egy megtört túlélő kísér át egy immunis kislányt a romba dőlt Amerikán.
-        Az alkotás a feszült túlélőharc mellett mély érzelmekkel és mesteri karakterfejlődéssel mutatja be az emberi kapcsolatok erejét a világvége után.</p>
-    </div>
-
-    <!-- Sorozat 5 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-        <h2>Star Trek</h2>
-        <img src="képek/Sorozat/Star Trek (SciFi).jpg" alt="Star Trek" width="250">
-        <p>A Star Trek egy úttörő sci-fi franchise, amely a Csillagflotta legénységének utazásait követi, amint új világokat fedeznek fel, és békés kapcsolatokat építenek ki a galaxisban.
-        A sorozat évtizedek óta a technológiai fejlődés, a humanizmus és a társadalmi elfogadás egyik legfontosabb popkulturális szimbóluma.</p>
-    </div>
+            <a href="sorozatesfilm.html" class="nav-link text-white px-3">
+                Hozzáadás
+            </a>
 
         </div>
+
     </div>
+</nav>
+
+    <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+
+        <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5 rounded shadow">
+            Top 5 legnézettebb filmek
+        </header>
+
+        <div class="col-lg-12">
+        <div class="row bg-warning p-4 rounded shadow">
+
+        <!-- Film 1 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/film/Michael (Dráma).jpg"
+                alt="Michael"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Michael</h2>
+
+                    <p class="card-text">
+                        Az Antoine Fuqua által rendezett Michael egy nagyszabású életrajzi film, amelyben a Pop Királyát saját unokaöccse, Jaafar Jackson alakítja lenyűgöző hitelességgel.
+                        Az idén áprilisban bemutatott alkotás a korai Jackson 5 sikerektől a szólókarrier csúcsáig követi végig a zenei ikon zseniális és komplex életútját.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Film 2 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/film/F1 The Movie (Akció).jpg"
+                alt="F1 The Movie"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">F1 The Movie</h2>
+
+                    <p class="card-text">
+                        A Joseph Kosinski rendezésében készült F1 – A film egy látványos sportdráma, amelyben a Brad Pitt által alakított veterán pilóta visszatér a száguldó cirkuszba.
+                        A produkciót valódi versenyhétvégéken, igazi Forma–1-es autókkal és pilótákkal forgatták.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Film 3 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/film/Avatar (Fantasy).jpg"
+                alt="Avatar"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Avatar</h2>
+
+                    <p class="card-text">
+                        James Cameron vizuálisan forradalmi sci-fi eposza, az Avatar, a Pandora holdjára kalauzolja a nézőket.
+                        A lenyűgöző látványvilágáról és erős környezetvédelmi üzenetéről ismert alkotás filmtörténelmet írt.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Film 4 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/film/Alien (SciFi).jpg"
+                alt="Alien"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Alien</h2>
+
+                    <p class="card-text">
+                        Ridley Scott 1979-es sci-fi horror klasszikusa, az Alien a Nostromo űrhajó legénységének harcát mutatja be egy idegen lénnyel.
+                        A feszült hangulat és Sigourney Weaver alakítása örökre megváltoztatta a sci-fi és horror műfaját.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Film 5 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/film/Schumacher (Dokumentum).jpg"
+                alt="Schumacher"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Schumacher</h2>
+
+                    <p class="card-text">
+                        A Schumacher című Netflix-dokumentumfilm részletes portrét fest a hétszeres Forma–1-es világbajnok karrierjéről.
+                        Az alkotás archív felvételeken és exkluzív interjúkon keresztül mutatja be Michael Schumacher életét.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        </div>
+        <header class="text-center h2 p-3 container-fluid bg-light text-dark m-3 rounded shadow">
+            Top 5 legnézettebb sorozat
+        </header>
+
+        <div class="col-lg-12">
+        <div class="row bg-warning p-4 rounded shadow">
+        
+        <!-- Sorozat 1 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/Sorozat/Family Guy (jpg verzio).jpg"
+                alt="Family Guy"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Family Guy</h2>
+
+                    <p class="card-text">
+                        A Family Guy egy szatirikus animációs sorozat, amely a Griffin család abszurd mindennapjait mutatja be.
+                        A popkulturális utalásairól és fekete humoráról ismert széria világszerte népszerű.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sorozat 2 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/Sorozat/Dr. House (Dráma).jpg"
+                alt="Dr House"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Dr. House</h2>
+
+                    <p class="card-text">
+                        A Dr. House egy zseniális, de cinikus diagnoszta orvos történetét követi.
+                        A sorozat a rejtélyes betegségek és a főszereplő belső küzdelmei miatt vált legendává.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sorozat 3 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/Sorozat/Trónok Harca (Fantasy).jpg"
+                alt="Trónok Harca"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Trónok harca</h2>
+
+                    <p class="card-text">
+                        A Trónok harca egy monumentális fantasy sorozat Westeros nemesi házainak hatalmi harcairól.
+                        A váratlan fordulatok és epikus csaták miatt a televíziózás egyik legnagyobb sikere lett.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sorozat 4 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/Sorozat/The Last Of Us (Horror).jpg"
+                alt="The Last Of Us"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">The Last Of Us</h2>
+
+                    <p class="card-text">
+                        A The Last of Us egy érzelmes posztapokaliptikus történet egy túlélőről és egy immunis kislányról.
+                        A sorozat mély karakterábrázolásával és drámai hangulatával vált kiemelkedővé.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sorozat 5 -->
+        <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="card shadow" style="width: 22rem;">
+
+                <img src="képek/Sorozat/Star Trek (SciFi).jpg"
+                alt="Star Trek"
+                class="card-img-top">
+
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title text-center">Star Trek</h2>
+
+                    <p class="card-text">
+                        A Star Trek egy legendás sci-fi franchise, amely a Csillagflotta felfedező küldetéseit követi.
+                        A sorozat a tudományos fejlődés és az emberi összefogás egyik legismertebb szimbóluma.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
 
     
 </body>

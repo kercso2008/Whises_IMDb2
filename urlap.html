@@ -8,18 +8,51 @@
   </head>
   <body class="bg-dark text-light">
 
-    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Wishes IMDb</header>
+    <header class="text-center h1 py-3 bg-light text-dark shadow-sm">
+    🎬 Wishes IMDb
+</header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-center">
-      <a href="index.html" class="ms-5 text-white">Főoldal</a>
-      <a href="filmek.html" class="ms-5 text-white">Filmek</a>
-      <a href="sorozatok.html" class="ms-5 text-white">Sorozatok</a>
-      <a href="kedvenceim.html" class="ms-5 text-white">Kedvenceim</a>
-      <a href="urlap.html" class="ms-5 text-white">Filmajánlás</a>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container justify-content-center">
+
+        <div class="navbar-nav gap-3">
+
+            <a href="index.html" class="nav-link text-white px-3">
+                Főoldal
+            </a>
+
+            <a href="filmek.html" class="nav-link text-white px-3">
+                Filmek
+            </a>
+
+            <a href="sorozatok.html" class="nav-link text-white px-3">
+                Sorozatok
+            </a>
+
+            <a href="kedvenceim.html" class="nav-link text-white px-3">
+                Kedvenceim
+            </a>
+
+            <a href="urlap.html" class="nav-link text-white px-3">
+                Filmajánlás
+            </a>
+
+            <a href="sorozatesfilm.html" class="nav-link text-white px-3">
+                Hozzáadás
+            </a>
+
+        </div>
+
+    </div>
+</nav>
 
     <!-- Műfaj választó -->
-    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Filmajánlás</header>
+     <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5 rounded shadow">Filmajánlás</header>
+
+      </div>
+     </div>
 
     <div class="container mt-4">
 
@@ -88,7 +121,7 @@
 
   <div class="container mt-4 d-flex justify-content-center">
 
-  <div class="card shadow p-3 w-75 bg-warning p-4 rounded shadow" id="eredmeny">
+  <div class="card shadow p-3 w-75 bg-warning p-4 rounded shadow" id="eredmeny" style="display: none;">
   </div>
 
 </div>
@@ -98,12 +131,13 @@
 
   <script>
     const filmek = [
-      {
+  {
     cim: "A Viszkis",
     mufaj: "Bűnügyi",
     hossz: "120tobb",
     streaming: "Netflix",
     ertekeles: 4,
+    kep: "képek/film/A viszkis (Bűnügyi).jpg"
   },
   {
     cim: "Ace Ventura: Állati nyomozó",
@@ -111,6 +145,7 @@
     hossz: "90kisebb",
     streaming: "SkyShowtime",
     ertekeles: 3,
+    kep: "képek/film/Ace Ventura (Vígjáték).jpg"
   },
   {
     cim: "Alien",
@@ -118,6 +153,7 @@
     hossz: "90-120",
     streaming: "Disney+",
     ertekeles: 5,
+    kep: "képek/film/Alien (SciFi).jpg"
   },
   {
     cim: "Avatar",
@@ -125,6 +161,7 @@
     hossz: "120tobb",
     streaming: "Disney+",
     ertekeles: 4,
+    kep: "képek/film/Avatar (Fantasy).jpg"
   },
   {
     cim: "Az ördög jobb és bal keze",
@@ -132,6 +169,7 @@
     hossz: "90-120",
     streaming: "Prime Video",
     ertekeles: 4,
+    kep: "képek/film/Az ördög jobb és bal keze (western).jpg"
   },
   {
     cim: "F1 The Movie",
@@ -139,6 +177,7 @@
     hossz: "120tobb",
     streaming: "Mozi",
     ertekeles: 0,
+    kep: "képek/film/F1 The Movie (Akció).jpg"
   },
   {
     cim: "Jumanji",
@@ -146,6 +185,7 @@
     hossz: "90-120",
     streaming: "Netflix",
     ertekeles: 4,
+    kep: "képek/film/Jumanji (Kaland).jpg"
   },
   {
     cim: "Michael",
@@ -153,6 +193,7 @@
     hossz: "90-120",
     streaming: "Netflix",
     ertekeles: 4,
+    kep: "képek/film/Michael (Dráma).jpg"
   },
   {
     cim: "Rémálom az Elm utcában",
@@ -160,6 +201,7 @@
     hossz: "90-120",
     streaming: "HBO Max",
     ertekeles: 4,
+    kep: "képek/film/Rémálom az Elm utcában (Horror).jpg"
   },
   {
     cim: "Schumacher",
@@ -167,6 +209,7 @@
     hossz: "90-120",
     streaming: "Netflix",
     ertekeles: 4,
+    kep: "képek/film/Schumacher (Dokumentum).jpg"
   },
   {
     cim: "Columbo",
@@ -174,6 +217,7 @@
     hossz: "90kisebb",
     streaming: "SkyShowtime",
     ertekeles: 4,
+    kep: "képek/sorozat/Columbo (Bűnügyi).jpg"
   },
   {
     cim: "Dr. House",
@@ -181,6 +225,7 @@
     hossz: "90kisebb",
     streaming: "Netflix",
     ertekeles: 5,
+    kep: "képek/Sorozat/Dr. House (Dráma).jpg"
   },
   {
     cim: "Formula 1: Drive to Survive",
@@ -188,6 +233,7 @@
     hossz: "90kisebb",
     streaming: "Netflix",
     ertekeles: 5,
+    kep: "képek/Sorozat/Drive to Survive (Dokumentum).jpg"
   },
   {
     cim: "Family Guy",
@@ -195,6 +241,7 @@
     hossz: "90kisebb",
     streaming: "Disney+",
     ertekeles: 4,
+    kep: "képek/Sorozat/Family Guy (jpg verzio).jpg"
   },
   {
     cim: "Spartacus",
@@ -202,6 +249,7 @@
     hossz: "90kisebb",
     streaming: "Starz",
     ertekeles: 5,
+    kep: "képek/Sorozat/Spartacus (Kaland).jpg"
   },
   {
     cim: "Star Trek",
@@ -209,6 +257,7 @@
     hossz: "90kisebb",
     streaming: "SkyShowtime",
     ertekeles: 4,
+    kep: "képek/Sorozat/Star Trek (SciFi).jpg"
   },
   {
     cim: "The Last of Us",
@@ -216,6 +265,7 @@
     hossz: "90kisebb",
     streaming: "HBO Max",
     ertekeles: 5,
+    kep: "képek/Sorozat/The Last Of Us (Horror).jpg"
   },
   {
     cim: "Trónok harca",
@@ -223,6 +273,7 @@
     hossz: "90kisebb",
     streaming: "HBO Max",
     ertekeles: 5,
+    kep: "képek/Sorozat/Trónok Harca (Fantasy).jpg"
   },
   {
     cim: "Yellowstone",
@@ -230,6 +281,7 @@
     hossz: "90kisebb",
     streaming: "SkyShowtime",
     ertekeles: 5,
+    kep: "képek/Sorozat/Yellowstone (Western).jpg"
   },
   {
     cim: "Zöld Íjász",
@@ -237,8 +289,11 @@
     hossz: "90kisebb",
     streaming: "Netflix",
     ertekeles: 4,
-  },
-    ];
+    kep: "képek/Sorozat/Zöldíjász (akció).jpg"
+  }
+];
+    let sajatTartalom =
+    JSON.parse(localStorage.getItem("sajatTartalom")) || [];
     function kereses() {
       const mufaj = document.getElementById("filmtipus").value;
       const hossz = document.querySelector(
@@ -270,24 +325,48 @@
         eredmeny.innerHTML = "<h2>Találatok:</h2>";
         talalatok.forEach((film) => {
           eredmeny.innerHTML += `
-<div class="card shadow-sm mb-3 p-3">
+<div class="card mb-3 shadow-sm">
 
-    <h3 class="mb-3">${film.cim}</h3>
+    <div class="row g-0">
 
-    <p class="mb-1">
-        <strong>Műfaj:</strong> ${film.mufaj}
-    </p>
+        <!-- KÉP -->
+        <div class="col-md-4">
+            <img
+                src="${film.kep || 'képek/letöltés.png'}"
+                class="img-fluid rounded-start"
+                alt="${film.cim}"
+                style="height: 100%; object-fit: cover;"
+            >
+        </div>
 
-    <p class="mb-1">
-        <strong>Streaming:</strong> ${film.streaming}
-    </p>
+        <!-- TARTALOM -->
+        <div class="col-md-8">
 
-    <p class="mb-0">
-        <strong>Értékelés:</strong> ${film.ertekeles}/5
-    </p>
+            <div class="card-body">
+
+                <h3 class="card-title">${film.cim}</h3>
+
+                <p class="card-text mb-1">
+                    <strong>Műfaj:</strong> ${film.mufaj}
+                </p>
+
+                <p class="card-text mb-1">
+                    <strong>Streaming:</strong> ${film.streaming}
+                </p>
+
+                <p class="card-text">
+                    <strong>Értékelés:</strong> ${film.ertekeles}/5
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
-                `;
+                `
+                eredmeny.style.display = "block";;
         });
       } else {
         eredmeny.innerHTML = `
@@ -295,5 +374,38 @@
             `;
       }
     }
+    
+    sajatTartalom.forEach(elem => {
+
+    let hosszKategoria = "";
+
+    if(elem.hossz == "90 perc alatt"){
+        hosszKategoria = "90kisebb";
+    }
+    else if(elem.hossz == "90 - 120 perc"){
+        hosszKategoria = "90-120";
+    }
+    else{
+        hosszKategoria = "120tobb";
+    }
+
+    filmek.push({
+
+        cim: elem.cim,
+
+        mufaj: elem.mufaj,
+
+        hossz: hosszKategoria,
+
+        streaming: elem.streaming,
+
+        kep: elem.kep,
+
+        ertekeles:
+            parseInt(elem.csillag.replace("⭐ ", "").replace("/5", ""))
+
+    });
+
+});
   </script>
 </html>

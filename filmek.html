@@ -1,272 +1,488 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Wishes IMDb - Filmek</title>
-</head>
-<body class="bg-dark text-light">
-    <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Wishes IMDb</header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-center">
-        <a href="index.html" class="ms-5 text-white">Főoldal</a>
-        <a href="filmek.html" class="ms-5 text-white">Filmek</a>
-        <a href="sorozatok.html" class="ms-5 text-white">Sorozatok</a>
-        <a href="kedvenceim.html" class="ms-5 text-white">Kedvenceim</a>
-        <a href="urlap.html" class="ms-5 text-white">Filmajánlás</a>
-    </nav>
+  </head>
+  <body class="bg-dark text-light">
+    <header class="text-center h1 py-3 bg-light text-dark shadow-sm">
+    🎬 Wishes IMDb
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container justify-content-center">
+
+        <div class="navbar-nav gap-3">
+
+            <a href="index.html" class="nav-link text-white px-3">
+                Főoldal
+            </a>
+
+            <a href="filmek.html" class="nav-link text-white px-3">
+                Filmek
+            </a>
+
+            <a href="sorozatok.html" class="nav-link text-white px-3">
+                Sorozatok
+            </a>
+
+            <a href="kedvenceim.html" class="nav-link text-white px-3">
+                Kedvenceim
+            </a>
+
+            <a href="urlap.html" class="nav-link text-white px-3">
+                Filmajánlás
+            </a>
+
+            <a href="sorozatesfilm.html" class="nav-link text-white px-3">
+                Hozzáadás
+            </a>
+
+        </div>
+
+    </div>
+</nav>
 
     <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
+      <div class="row d-flex align-items-center justify-content-center">
+        <header
+          class="text-center h2 p-3 container-fluid bg-light text-dark mt-5 rounded shadow"
+        >
+          Filmek
+        </header>
 
-                <header class="text-center h2 p-3 container-fluid bg-light text-dark mt-5">Filmek</header>
+        <div class="col-lg-12">
+          <div class="row bg-warning p-4 rounded shadow">
+            <!-- Film 1 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/A viszkis (Bűnügyi).jpg"
+                  alt="A Viszkis"
+                  class="card-img-top"
+                />
 
-   <!-- Film 1 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">A Viszkis</h2>
 
-        <h2>A Viszkis</h2>
+                  <p>
+                    <strong>Bűnügyi</strong> | 126 perc |
+                    <strong>Netflix</strong> | ⭐ 4/5
+                  </p>
 
-        <img src="képek/film/A viszkis (Bűnügyi).jpg" alt="A Viszkis" width="250">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'A Viszkis',
+                        'Bűnügyi',
+                        'képek/film/A viszkis (Bűnügyi).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <p>Bűnügyi | 126 perc | Netflix | ⭐ 4/5</p>
+            <!-- Film 2 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Ace Ventura (Vígjáték).jpg"
+                  alt="Ace Ventura"
+                  class="card-img-top"
+                />
 
-        <button onclick="kedvencMentese(
-            'A Viszkis',
-            'Bűnügyi',
-            'képek/film/A viszkis (Bűnügyi).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">
+                    Ace Ventura: Állati nyomozó
+                  </h2>
 
-    </div>
+                  <p>
+                    <strong>Vígjáték</strong> | 86 perc |
+                    <strong>SkyShowtime</strong> | ⭐ 3/5
+                  </p>
 
-    <!-- Film 2 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Ace Ventura: Állati nyomozó',
+                        'Vígjáték',
+                        'képek/film/Ace Ventura (Vígjáték).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <h2>Ace Ventura: Állati nyomozó</h2>
+            <!-- Film 3 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Alien (SciFi).jpg"
+                  alt="Alien"
+                  class="card-img-top"
+                />
 
-        <img src="képek/film/Ace Ventura (Vígjáték).jpg" alt="Ace Ventura" width="250">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Alien</h2>
 
-        <p>Vígjáték | 86 perc | SkyShowtime | ⭐ 3/5</p>
+                  <p>
+                    <strong>Sci-Fi</strong> | 117 perc |
+                    <strong>Disney+</strong> | ⭐ 5/5
+                  </p>
 
-        <button onclick="kedvencMentese(
-            'Ace Ventura: Állati nyomozó',
-            'Vígjáték',
-            'képek/film/Ace Ventura (Vígjáték).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Alien',
+                        'Sci-Fi',
+                        'képek/film/Alien (Sci-Fi).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-    </div>
+            <!-- Film 4 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Avatar (Fantasy).jpg"
+                  alt="Avatar"
+                  class="card-img-top"
+                />
 
-    <!-- Film 3 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Avatar</h2>
 
-        <h2>Alien</h2>
+                  <p>
+                    <strong>Fantasy</strong> | 162 perc |
+                    <strong>Disney+</strong> | ⭐ 4/5
+                  </p>
 
-        <img src="képek/film/Alien (SciFi).jpg" alt="Alien" width="250">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Avatar',
+                        'Fantasy',
+                        'képek/film/Avatar (Fantasy).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <p>Sci-Fi | 117 perc | Disney+ | ⭐ 5/5</p>
+            <!-- Film 5 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Az ördög jobb és bal keze (western).jpg"
+                  alt="Az ördög jobb és bal keze"
+                  class="card-img-top"
+                />
 
-        <button onclick="kedvencMentese(
-            'Alien',
-            'Sci-Fi',
-            'képek/film/Alien (Sci-Fi).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">
+                    Az ördög jobb és bal keze
+                  </h2>
 
-    </div>
+                  <p>
+                    <strong>Western</strong> | 115 perc |
+                    <strong>Prime Video</strong> | ⭐ 4/5
+                  </p>
 
-    <!-- Film 4 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Az ördög jobb és bal keze',
+                        'Western',
+                        'képek/film/Az ördög jobb és bal keze (Western).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <h2>Avatar</h2>
+            <!-- Film 6 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/F1 The Movie (Akció).jpg"
+                  alt="F1 The Movie"
+                  class="card-img-top"
+                />
 
-        <img src="képek/film/Avatar (Fantasy).jpg" alt="Avatar" width="250">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">F1 The Movie</h2>
 
-        <p>Fantasy | 162 perc | Disney+ | ⭐ 4/5</p>
+                  <p>
+                    <strong>Akció</strong> | 130 perc | <strong>Mozi</strong> |
+                    ⭐ 0/5
+                  </p>
 
-        <button onclick="kedvencMentese(
-            'Avatar',
-            'Fantasy',
-            'képek/film/Avatar (Fantasy).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'F1 The Movie',
+                        'Akció',
+                        'képek/film/F1 The Movie (Akció).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-    </div>
+            <!-- Film 7 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Jumanji (Kaland).jpg"
+                  alt="Jumanji"
+                  class="card-img-top"
+                />
 
-    <!-- Film 5 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Jumanji</h2>
 
-        <h2>Az ördög jobb és bal keze</h2>
+                  <p>
+                    <strong>Kaland</strong> | 104 perc |
+                    <strong>Netflix</strong> | ⭐ 4/5
+                  </p>
 
-        <img src="képek/film/Az ördög jobb és bal keze (western).jpg"
-        alt="Az ördög jobb és bal keze"
-        width="250">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Jumanji',
+                        'Kaland',
+                        'képek/film/Jumanji (Kaland).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <p>Western | 115 perc | Prime Video | ⭐ 4/5</p>
+            <!-- Film 8 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Michael (Dráma).jpg"
+                  alt="Michael"
+                  class="card-img-top"
+                />
 
-        <button onclick="kedvencMentese(
-            'Az ördög jobb és bal keze',
-            'Western',
-            'képek/film/Az ördög jobb és bal keze (Western).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Michael</h2>
 
-    </div>
+                  <p>
+                    <strong>Dráma</strong> | 111 perc |
+                    <strong>Netflix</strong> | ⭐ 4/5
+                  </p>
 
-    <!-- Film 6 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Michael',
+                        'Dráma',
+                        'képek/film/Michael (Dráma).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <h2>F1 The Movie</h2>
+            <!-- Film 9 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Rémálom az Elm utcában (Horror).jpg"
+                  alt="Rémálom az Elm utcában"
+                  class="card-img-top"
+                />
 
-        <img src="képek/film/F1 The Movie (Akció).jpg"
-        alt="F1 The Movie"
-        width="250">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Rémálom az Elm utcában</h2>
 
-        <p>Akció | 130 perc | Mozi | ⭐ 0/5</p>
+                  <p>
+                    <strong>Horror</strong> | 91 perc |
+                    <strong>HBO Max</strong> | ⭐ 4/5
+                  </p>
 
-        <button onclick="kedvencMentese(
-            'F1 The Movie',
-            'Akció',
-            'képek/film/F1 The Movie (Akció).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Rémálom az Elm utcában',
+                        'Horror',
+                        'képek/film/Rémálom az Elm utcában (Horror).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
 
-    </div>
+            <!-- Film 10 -->
+            <div class="col-md-3 d-flex justify-content-center mt-4">
+              <div class="card shadow" style="width: 18rem">
+                <img
+                  src="képek/film/Schumacher (Dokumentum).jpg"
+                  alt="Schumacher"
+                  class="card-img-top"
+                />
 
-    <!-- Film 7 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
+                <div class="card-body d-flex flex-column">
+                  <h2 class="card-title text-center">Schumacher</h2>
 
-        <h2>Jumanji</h2>
+                  <p>
+                    <strong>Dokumentum</strong> | 112 perc |
+                    <strong>Netflix</strong> | ⭐ 4/5
+                  </p>
 
-        <img src="képek/film/Jumanji (Kaland).jpg"
-        alt="Jumanji"
-        width="250">
-
-        <p>Kaland | 104 perc | Netflix | ⭐ 4/5</p>
-
-        <button onclick="kedvencMentese(
-            'Jumanji',
-            'Kaland',
-            'képek/film/Jumanji (Kaland).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
-
-    </div>
-
-    <!-- Film 8 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-
-        <h2>Michael</h2>
-
-        <img src="képek/film/Michael (Dráma).jpg"
-        alt="Michael"
-        width="250">
-
-        <p>Dráma | 111 perc | Netflix | ⭐ 4/5</p>
-
-        <button onclick="kedvencMentese(
-            'Michael',
-            'Dráma',
-            'képek/film/Michael (Dráma).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
-
-    </div>
-
-    <!-- Film 9 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-
-        <h2>Rémálom az Elm utcában</h2>
-
-        <img src="képek/film/Rémálom az Elm utcában (Horror).jpg"
-        alt="Rémálom az Elm utcában"
-        width="250">
-
-        <p>Horror | 91 perc | HBO Max | ⭐ 4/5</p>
-
-        <button onclick="kedvencMentese(
-            'Rémálom az Elm utcában',
-            'Horror',
-            'képek/film/Rémálom az Elm utcában (Horror).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
-
-    </div>
-
-    <!-- Film 10 -->
-    <div class="col-lg-7 col-md-12 bg-warning text-dark rounded p-3 mb-5">
-
-        <h2>Schumacher</h2>
-
-        <img src="képek/film/Schumacher (Dokumentum).jpg"
-        alt="Schumacher"
-        width="250">
-
-        <p>Dokumentum | 112 perc | Netflix | ⭐ 4/5</p>
-
-        <button onclick="kedvencMentese(
-            'Schumacher',
-            'Dokumentum',
-            'képek/film/Schumacher (Dokumentum).jpg',
-            'Film'
-        )">
-            ⭐ Kedvenc
-        </button>
-    </div>
+                  <button
+                    onclick="
+                      kedvencMentese(
+                        'Schumacher',
+                        'Dokumentum',
+                        'képek/film/Schumacher (Dokumentum).jpg',
+                        'Film',
+                      )
+                    "
+                    class="btn btn-success mt-auto"
+                  >
+                    ⭐ Kedvenc
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="dinamikusTartalom" class="col-md-3 d-flex justify-content-center mt-4"></div>
+          </div>
         </div>
+      </div>
     </div>
-
-
     <script>
+      function kedvencMentese(cim, mufaj, kep, tipus) {
+        let kedvencek = JSON.parse(localStorage.getItem("kedvencek")) || [];
 
-        function kedvencMentese(cim, mufaj, kep, tipus){
+        let uj = {
+          cim: cim,
+          mufaj: mufaj,
+          kep: kep,
+          tipus: tipus,
+        };
 
-            let kedvencek =
-                JSON.parse(localStorage.getItem("kedvencek")) || [];
+        if (!kedvencek.find((f) => f.cim === cim)) {
+          kedvencek.push(uj);
 
-            let uj = {
-                cim: cim,
-                mufaj: mufaj,
-                kep: kep,
-                tipus: tipus
-            };
+          localStorage.setItem("kedvencek", JSON.stringify(kedvencek));
 
-            if(!kedvencek.find(f => f.cim === cim)){
-
-                kedvencek.push(uj);
-
-                localStorage.setItem(
-                    "kedvencek",
-                    JSON.stringify(kedvencek)
-                );
-
-                alert("Hozzáadva a kedvencekhez!");
-            }
-            else{
-
-                alert("Már szerepel a kedvencek között!");
-
-            }
+          alert("Hozzáadva a kedvencekhez!");
+        } else {
+          alert("Már szerepel a kedvencek között!");
         }
+      }
 
+      let lista = JSON.parse(localStorage.getItem("sajatTartalom")) || [];
+
+      let hely = document.getElementById("dinamikusTartalom");
+
+      lista.forEach((elem) => {
+        if (elem.tipus == "Film") {
+          hely.innerHTML += `
+
+        
+            <div class="card shadow" style="width: 18rem;">
+
+                ${
+                  elem.kep ? `<img src="${elem.kep}" class="card-img-top">` : `<img src="képek/letöltés.png" class="card-img-top">`
+                }
+
+                <div class="card-body d-flex flex-column">
+
+                    <h2 class="card-title text-center">
+                        ${elem.cim}
+                    </h2>
+
+                   <p>
+    <strong>${elem.mufaj}</strong>
+    |
+    ${elem.hossz}
+    |
+    <strong>${elem.streaming}</strong>
+    |
+    ${elem.csillag}
+</p>
+
+                    <button
+                        onclick="kedvencMentese(
+                            '${elem.cim}',
+                            '${elem.mufaj}',
+                            '${elem.kep}',
+                            '${elem.tipus}'
+                        )"
+                        class="btn btn-success mt-auto">
+
+                        ⭐ Kedvenc
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+        `;
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
